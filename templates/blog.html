@@ -6,7 +6,16 @@
 
 <section class="posts">
     <h1>Blog</h1>
-    <p>I am the Simpsons trivia king! LOL.</p>
+
+    {% for post in posts %}
+        <article>
+            <h2>
+                <a href="{{ url_for('post', slug=post.slug) }}">
+                    {{ post.title }}
+                </a>
+            </h2>
+        </article>
+    {% endfor %}
 </section>
 
 {% endblock %}
