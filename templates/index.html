@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}longn.ca{% endblock %}
 
-    <title>longn.ca</title>
+{% block content %}
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-
-    <h1>longn.ca</h1>
+<section class="hero">
+    <h1>Hi, I'm Long.</h1>
 
     <p>
-        Cybersecurity, homelabs, technology,
-        and whatever else I feel like writing about.
+        This is where I write about cybersecurity, homelabs,
+        technology, projects, and whatever rabbit hole I'm
+        currently exploring.
     </p>
+</section>
 
-</body>
+<section class="posts">
+    <h2>Recent posts</h2>
 
-</html>
+    <p>Nothing here yet. I just built the damn thing.</p>
+</section>
+
+{% endblock %}
