@@ -20,12 +20,12 @@ p {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+ }
 }
-
 .nav-links {
     display: flex;
     gap: 24px;
@@ -50,4 +50,45 @@ p {
 .posts {
     border-top: 1px solid #ddd;
     padding-top: 32px;
+}
+.blog-post-preview a {
+    color: inherit;
+    text-decoration: none;
+}
+.blog-post-preview a:hover {
+    font-size: 1.05em;
+
+}
+.blog-post-preview {
+    margin-bottom: 2.5rem;
+}
+
+.post-date {
+    color: #666;
+    font-size: 0.95rem;
+}
+.archive-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    align-items: baseline;
+}
+
+.archive-date {
+    color: #666;
+    min-width: 110px;
+}
+
+.archive-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.archive-item a:hover {
+    text-decoration: underline;
+}
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
 }

@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}longn.ca{% endblock %}
+{% block title %}
+    <img src="https://ibb.co/dsJydg3v" alt="Long's Image">(/img>)
+{% endblock %}
 
 {% block content %}
 
@@ -14,10 +16,23 @@
     </p>
 </section>
 
-<section class="posts">
-    <h2>Recent posts</h2>
 
-    <p>Nothing here yet. I just built the damn thing.</p>
+<section class="posts">
+    <h1>Blog</h1>
+
+   {% for post in posts %}
+    <article class="blog-post-preview">
+        <h2>
+            <a href="{{ url_for('post', slug=post.slug) }}">
+                {{ post.title }}
+            </a>
+        </h2>
+
+        <p class="post-date">{{ post.date }}</p>
+
+        <p>{{ post.description }}</p>
+    </article>
+{% endfor %}
 </section>
 
 {% endblock %}
